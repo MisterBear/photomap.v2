@@ -1,21 +1,15 @@
 package itechart.group.nl.photomap.ui.fragments;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import itechart.group.nl.photomap.R;
 
-/**
- * Created by mac-229 on 4/28/15.
- */
 public class PlaceholderFragment extends Fragment {
-    /**
-     * The fragment argument representing the section number for this
-     * fragment.
-     */
+
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     /**
