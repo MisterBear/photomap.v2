@@ -1,46 +1,38 @@
 package itechart.group.nl.photomap.ui.adapters;
 
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import java.util.Locale;
+import java.util.ArrayList;
 
-import itechart.group.nl.photomap.ui.fragments.PlaceholderFragment;
+import itechart.group.nl.photomap.ui.fragments.BaseFragment;
 
 /**
  * Created by mac-229 on 4/28/15.
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-    public SectionsPagerAdapter(FragmentManager fm) {
+    private ArrayList<BaseFragment> mFragments;
+
+    public SectionsPagerAdapter(FragmentManager fm, ArrayList<BaseFragment> fragments) {
         super(fm);
+
+        mFragments = fragments;
     }
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        return mFragments.get(position);
     }
 
     @Override
     public int getCount() {
-        // Show 3 total pages.
-        return 3;
+        return mFragments.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        Locale l = Locale.getDefault();
-        switch (position) {
-            case 0:
-                return "test";
-            case 1:
-                return "test2";
-            case 2:
-                return "test3";
-        }
-        return null;
+        return mFragments.get(position).getScreenName();
     }
 }

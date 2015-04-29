@@ -1,4 +1,4 @@
-package itechart.group.nl.photomap.ui;
+package itechart.group.nl.photomap.ui.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -8,8 +8,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 import itechart.group.nl.photomap.R;
 import itechart.group.nl.photomap.ui.adapters.SectionsPagerAdapter;
+import itechart.group.nl.photomap.ui.fragments.BaseFragment;
+import itechart.group.nl.photomap.ui.fragments.MapFragment;
+import itechart.group.nl.photomap.ui.fragments.PhotoGridFragment;
+import itechart.group.nl.photomap.ui.fragments.PhotoListFragment;
 
 public class HomeActivity extends ActionBarActivity implements ActionBar.TabListener {
 
@@ -22,7 +28,7 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        configuratePager();
 
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -61,5 +67,20 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    }
+
+    private void configuratePager() {
+        ArrayList<BaseFragment> fragments = new ArrayList<BaseFragment>();
+        BaseFragment fragment = new MapFragment();
+
+        fragments.add(fragment);
+
+        fragment = new PhotoListFragment();
+        fragments.add(fragment);
+
+        fragment = new PhotoGridFragment();
+        fragments.add(fragment);
+
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), fragments);
     }
 }
