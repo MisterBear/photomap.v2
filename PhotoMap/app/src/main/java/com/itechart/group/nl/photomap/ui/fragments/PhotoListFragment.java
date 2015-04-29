@@ -1,12 +1,12 @@
-package itechart.group.nl.photomap.ui.fragments;
+package com.itechart.group.nl.photomap.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import itechart.group.nl.photomap.R;
-import itechart.group.nl.photomap.ui.PhotoMapApplication;
+import com.itechart.group.nl.photomap.R;
+import com.itechart.group.nl.photomap.ui.PhotoMapApplication;
 
 /**
  * Created by mac-229 on 4/29/15.

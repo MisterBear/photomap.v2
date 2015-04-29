@@ -1,4 +1,4 @@
-package nl.group.itechart.photomap;
+package com.nl.group.itechart.photomap;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

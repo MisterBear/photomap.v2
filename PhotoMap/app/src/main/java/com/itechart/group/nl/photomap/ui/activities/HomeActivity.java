@@ -1,4 +1,4 @@
-package itechart.group.nl.photomap.ui.activities;
+package com.itechart.group.nl.photomap.ui.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -8,14 +8,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
+import com.itechart.group.nl.photomap.R;
+import com.itechart.group.nl.photomap.ui.adapters.SectionsPagerAdapter;
+import com.itechart.group.nl.photomap.ui.fragments.BaseFragment;
+import com.itechart.group.nl.photomap.ui.fragments.MapFragment;
+import com.itechart.group.nl.photomap.ui.fragments.PhotoGridFragment;
+import com.itechart.group.nl.photomap.ui.fragments.PhotoListFragment;
 
-import itechart.group.nl.photomap.R;
-import itechart.group.nl.photomap.ui.adapters.SectionsPagerAdapter;
-import itechart.group.nl.photomap.ui.fragments.BaseFragment;
-import itechart.group.nl.photomap.ui.fragments.MapFragment;
-import itechart.group.nl.photomap.ui.fragments.PhotoGridFragment;
-import itechart.group.nl.photomap.ui.fragments.PhotoListFragment;
+import java.util.ArrayList;
 
 public class HomeActivity extends ActionBarActivity implements ActionBar.TabListener {
 

@@ -1,4 +1,4 @@
-package itechart.group.nl.photomap.ui.adapters;
+package com.itechart.group.nl.photomap.ui.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-import itechart.group.nl.photomap.ui.fragments.BaseFragment;
+import com.itechart.group.nl.photomap.ui.fragments.BaseFragment;
 
 /**
  * Created by mac-229 on 4/28/15.

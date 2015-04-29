@@ -1,4 +1,4 @@
-package itechart.group.nl.photomap.ui;
+package com.itechart.group.nl.photomap.ui;
 
 import android.app.Application;
 import android.content.Context;

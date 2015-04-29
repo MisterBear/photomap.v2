@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "itechart.group.nl.photomap"
+        applicationId "com.itechart.group.nl.photomap"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
